@@ -1,7 +1,7 @@
 {
   "name": "inflectors",
   "description": "Pluralize, singularize, capitalize, classify, and so on..",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/billysbilling/inflectors",
   "scripts": {
     "test": "mocha --reporter spec --recursive ./tests"
