@@ -8,6 +8,8 @@ Primarily extracted from [Billy Data](https://github.com/billysbilling/billy-dat
 ## Usage
 
 ### Node JS
+NPM: `npm install billy-inflector`
+
 ```javascript
 var inflector = require('billy-inflector');
 console.log(inflector.pluralize('computer'));
