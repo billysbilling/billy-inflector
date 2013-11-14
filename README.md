@@ -3,6 +3,8 @@ Billy Inflector [![Build Status](https://travis-ci.org/billysbilling/billy-infle
 
 Pluralize, singularize, capitalize, classify, and so on..
 
+Primarily extracted from [Billy Data](https://github.com/billysbilling/billy-data).
+
 ## Usage
 
 ### Node JS
