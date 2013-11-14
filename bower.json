@@ -1,0 +1,24 @@
+{
+  "name": "inflectors",
+  "dependencies": {},
+  "version": "1.0.2",
+  "homepage": "https://github.com/billysbilling/inflectors",
+  "authors": [
+    "Michael Storgaard <michael@billysbilling.com>"
+  ],
+  "description": "Pluralize, singularize, capitalize, classify, and so on..",
+  "main": "index.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    ".travis.yml",
+    "Gruntfile.js",
+    "package.json",
+    "README.md",
+    "TODO.md"
+  ]
+}
