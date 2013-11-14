@@ -8,11 +8,11 @@ Primarily extracted from [Billy Data](https://github.com/billysbilling/billy-dat
 ## Usage
 
 ### Node JS
-NPM: `npm install billy-inflector`
+NPM: `npm install inflectors`
 
 ```javascript
-var inflector = require('billy-inflector');
-console.log(inflector.pluralize('computer'));
+var inflectors = require('inflectors');
+console.log(inflectors.pluralize('computer'));
 ```
 
 ## API
@@ -22,7 +22,7 @@ Pluralize a string based on added rules and common patterns.
 
 #### Example
 ```javascript
-inflector.pluralize('entry'); //-> entries
+inflectors.pluralize('entry'); //-> entries
 ```
 
 ### Singularize
@@ -30,7 +30,7 @@ Singularize a string based on added rules and common patterns.
 
 #### Example
 ```javascript
-inflector.singularize('fixes'); //-> fix
+inflectors.singularize('fixes'); //-> fix
 ```
 
 ### Classify
@@ -38,7 +38,7 @@ Classify a string.
 
 #### Example
 ```javascript
-inflector.classify('accessLevel'); //-> AccessLevel
+inflectors.classify('accessLevel'); //-> AccessLevel
 ```
 
 ### Capitalize
@@ -46,5 +46,5 @@ Capitalize a string.
 
 #### Example
 ```javascript
-inflector.capitalize('watch'); //-> Watch
+inflectors.capitalize('watch'); //-> Watch
 ```
