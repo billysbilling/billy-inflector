@@ -2,37 +2,37 @@
 
 	var root = this;
 
-	var inflector = function(obj) {
-		if (obj instanceof inflector) return obj;
-		if (!(this instanceof inflector)) return new _(obj);
+	var inflectors = function(obj) {
+		if (obj instanceof inflectors) return obj;
+		if (!(this instanceof inflectors)) return new _(obj);
 		this._wrapped = obj;
 	};
 
 	if (typeof exports !== 'undefined') {
 		if (typeof module !== 'undefined' && module.exports) {
-			exports = module.exports = inflector;
+			exports = module.exports = inflectors;
 		}
-		exports.inflector = inflector;
+		exports.inflectors = inflectors;
 	} else {
-		root.inflector = inflector;
+		root.inflectors = inflectors;
 	}
 
 	var plurals = {};
 	var singulars = undefined;
 
 	// Add rule with plural form and singular form (overrides default patterns)
-	inflector.addRule = function(plural, singular) {
+	inflectors.addRule = function(plural, singular) {
 		plurals[plural] = singular;
 		_updateSingulars();
 	};
 	// Remove rule by plural form
-	inflector.removeRule = function(plural) {
+	inflectors.removeRule = function(plural) {
 		delete plurals[plural];
 		_updateSingulars();
 	};
 
 	// Pluralize, overriden by plural rules
-	inflector.pluralize = function(name) {
+	inflectors.pluralize = function(name) {
 		if (plurals[name]) {
 			return plurals[name];
 		} else if (name.slice(-1) == 'y') {
@@ -49,7 +49,7 @@
 	};
 
 	// Singularize, overridden by singular rules (opposites of plural rules)
-	inflector.singularize = function(name) {
+	inflectors.singularize = function(name) {
 		if (!singulars) {
 			_updateSingulars();
 		}
@@ -80,12 +80,12 @@
 	};
 
 	// Classify, upper case first character and ignore rest
-	inflector.classify = function(name) {
+	inflectors.classify = function(name) {
 		return name.substring(0, 1).toUpperCase()+name.substring(1);
 	};
 
 	// Capitalize, upper case first character and lower case rest
-	inflector.capitalize = function(name) {
+	inflectors.capitalize = function(name) {
 		return name.substring(0, 1).toUpperCase()+name.substring(1).toLowerCase();
 	};
 

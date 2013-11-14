@@ -1,17 +1,17 @@
 var assert = require('assert'),
-    inflector = require('../index');
+    inflectors = require('../index');
 
 describe('capitalize', function() {
 	it('id to Id', function() {
-		assert.equal(inflector.capitalize('id'), 'Id');
+		assert.equal(inflectors.capitalize('id'), 'Id');
 	});
 	it('ENTRY to Entry', function() {
-		assert.equal(inflector.capitalize('ENTRY'), 'Entry');
+		assert.equal(inflectors.capitalize('ENTRY'), 'Entry');
 	});
 	it('House to House', function() {
-		assert.equal(inflector.capitalize('House'), 'House');
+		assert.equal(inflectors.capitalize('House'), 'House');
 	});
 	it('FooBarFoo to Foobarfoo', function() {
-		assert.equal(inflector.capitalize('FooBarFoo'), 'Foobarfoo');
+		assert.equal(inflectors.capitalize('FooBarFoo'), 'Foobarfoo');
 	});
 });

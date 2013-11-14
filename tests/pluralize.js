@@ -1,75 +1,75 @@
 var assert = require('assert'),
-    inflector = require('../index');
+    inflectors = require('../index');
 
 describe('pluralize', function() {
 	describe('standard', function() {
 		it('id to ids', function() {
-			assert.equal(inflector.pluralize('id'), 'ids');
+			assert.equal(inflectors.pluralize('id'), 'ids');
 		});
 		it('entry to entries', function() {
-			assert.equal(inflector.pluralize('entry'), 'entries');
+			assert.equal(inflectors.pluralize('entry'), 'entries');
 		});
 		it('prefix to prefixes', function() {
-			assert.equal(inflector.pluralize('prefix'), 'prefixes');
+			assert.equal(inflectors.pluralize('prefix'), 'prefixes');
 		});
 		it('watch to watches', function() {
-			assert.equal(inflector.pluralize('watch'), 'watches');
+			assert.equal(inflectors.pluralize('watch'), 'watches');
 		});
 		it('house to houses', function() {
-			assert.equal(inflector.pluralize('house'), 'houses');
+			assert.equal(inflectors.pluralize('house'), 'houses');
 		});
 		it('stat to stats', function() {
-			assert.equal(inflector.pluralize('stat'), 'stats');
+			assert.equal(inflectors.pluralize('stat'), 'stats');
 		});
 		it('status to statuses', function() {
-			assert.equal(inflector.pluralize('status'), 'statuses');
+			assert.equal(inflectors.pluralize('status'), 'statuses');
 		});
 		it('invoice to invoices', function() {
-			assert.equal(inflector.pluralize('invoice'), 'invoices');
+			assert.equal(inflectors.pluralize('invoice'), 'invoices');
 		});
 		it('invoiceLine to invoiceLines', function() {
-			assert.equal(inflector.pluralize('invoiceLine'), 'invoiceLines');
+			assert.equal(inflectors.pluralize('invoiceLine'), 'invoiceLines');
 		});
 		it('country to countries', function() {
-			assert.equal(inflector.pluralize('country'), 'countries');
+			assert.equal(inflectors.pluralize('country'), 'countries');
 		});
 		it('currency to currencies', function() {
-			assert.equal(inflector.pluralize('currency'), 'currencies');
+			assert.equal(inflectors.pluralize('currency'), 'currencies');
 		});
 		it('access to accesses', function() {
-			assert.equal(inflector.pluralize('access'), 'accesses');
+			assert.equal(inflectors.pluralize('access'), 'accesses');
 		});
 		it('batch to batches', function() {
-			assert.equal(inflector.pluralize('batch'), 'batches');
+			assert.equal(inflectors.pluralize('batch'), 'batches');
 		});
 		it('bankLineMatch to bankLineMatches', function() {
-			assert.equal(inflector.pluralize('bankLineMatch'), 'bankLineMatches');
+			assert.equal(inflectors.pluralize('bankLineMatch'), 'bankLineMatches');
 		});
 	});
 	describe('custom', function() {
 		before(function() {
-			inflector.addRule('foo', 'bar');
-			inflector.addRule('foofoo', 'barbar');
-			inflector.removeRule('foofoo');
-			inflector.addRule('stats', 'stats');
-			inflector.addRule('status', 'status');
+			inflectors.addRule('foo', 'bar');
+			inflectors.addRule('foofoo', 'barbar');
+			inflectors.removeRule('foofoo');
+			inflectors.addRule('stats', 'stats');
+			inflectors.addRule('status', 'status');
 		});
 		after(function() {
-			inflector.removeRule('foo');
-			inflector.removeRule('stats');
-			inflector.removeRule('status');
+			inflectors.removeRule('foo');
+			inflectors.removeRule('stats');
+			inflectors.removeRule('status');
 		});
 		it('foo to bar', function() {
-			assert.equal(inflector.pluralize('foo'), 'bar');
+			assert.equal(inflectors.pluralize('foo'), 'bar');
 		});
 		it('foofoo to foofoos, not barbar', function() {
-			assert.equal(inflector.pluralize('foofoo'), 'foofoos');
+			assert.equal(inflectors.pluralize('foofoo'), 'foofoos');
 		});
 		it('stats to stats', function() {
-			assert.equal(inflector.pluralize('stats'), 'stats');
+			assert.equal(inflectors.pluralize('stats'), 'stats');
 		});
 		it('status to status', function() {
-			assert.equal(inflector.pluralize('status'), 'status');
+			assert.equal(inflectors.pluralize('status'), 'status');
 		});
 	});
 });

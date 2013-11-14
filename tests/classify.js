@@ -1,17 +1,17 @@
 var assert = require('assert'),
-    inflector = require('../index');
+    inflectors = require('../index');
 
 describe('classify', function() {
 	it('id to Id', function() {
-		assert.equal(inflector.classify('id'), 'Id');
+		assert.equal(inflectors.classify('id'), 'Id');
 	});
 	it('ENTRY to ENTRY', function() {
-		assert.equal(inflector.classify('ENTRY'), 'ENTRY');
+		assert.equal(inflectors.classify('ENTRY'), 'ENTRY');
 	});
 	it('House to House', function() {
-		assert.equal(inflector.classify('House'), 'House');
+		assert.equal(inflectors.classify('House'), 'House');
 	});
 	it('FooBarFoo to FooBarFoo', function() {
-		assert.equal(inflector.classify('FooBarFoo'), 'FooBarFoo');
+		assert.equal(inflectors.classify('FooBarFoo'), 'FooBarFoo');
 	});
 });

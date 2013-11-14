@@ -1,4 +1,4 @@
-Billy Inflector [![Build Status](https://travis-ci.org/billysbilling/billy-inflector.png)](https://travis-ci.org/billysbilling/billy-inflector)
+Inflectors [![Build Status](https://travis-ci.org/billysbilling/inflectors.png)](https://travis-ci.org/billysbilling/inflectors)
 ===============
 
 Pluralize, singularize, capitalize, classify, and so on..
