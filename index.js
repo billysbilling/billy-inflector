@@ -35,17 +35,20 @@
 	inflectors.pluralize = function(name) {
 		if (plurals[name]) {
 			return plurals[name];
-		} else if (name.slice(-1) == 'y') {
-			return name.substring(0, name.length - 1)+'ies';
-		} else if (name.slice(-1) == 's') {
-			return name+'es';
-		} else if (name.slice(-3) == 'tch') {
-			return name+'es';
-		} else if (name.slice(-1) == 'x') {
-			return name+'es';
-		} else {
-			return name+'s';
 		}
+		if (name.slice(-1) == 'y') {
+			return name.substring(0, name.length - 1)+'ies';
+		}
+		if (name.slice(-1) == 's') {
+			return name+'es';
+		}
+		if (name.slice(-3) == 'tch') {
+			return name+'es';
+		}
+		if (name.slice(-1) == 'x') {
+			return name+'es';
+		}
+		return name+'s';
 	};
 
 	// Singularize, overridden by singular rules (opposites of plural rules)
@@ -55,19 +58,23 @@
 		}
 		if (singulars[name]) {
 			return singulars[name];
-		} else if (name.slice(-3) == 'ies') {
+		}
+		if (name.slice(-3) == 'ies') {
 			return name.substring(0, name.length-3)+'y';
-		} else if (name.slice(-4) == 'uses') {
-			return name.substring(0, name.length-1);
-		} else if (name.slice(-3) == 'ses') {
-			return name.substring(0, name.length-2);
-		} else if (name.slice(-5) == 'tches') {
-			return name.substring(0, name.length-2);
-		} else if (name.slice(-3) == 'xes') {
-			return name.substring(0, name.length-2);
-		} else {
+		}
+		if (name.slice(-4) == 'uses') {
 			return name.substring(0, name.length-1);
 		}
+		if (name.slice(-3) == 'ses') {
+			return name.substring(0, name.length-2);
+		}
+		if (name.slice(-5) == 'tches') {
+			return name.substring(0, name.length-2);
+		}
+		if (name.slice(-3) == 'xes') {
+			return name.substring(0, name.length-2);
+		}
+		return name.substring(0, name.length-1);
 	};
 
 	// Clears singular rules and recreates from opposites of plural rules
