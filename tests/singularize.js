@@ -42,6 +42,9 @@ describe('singularize', function() {
 		it('bankLineMatches to bankLineMatch', function() {
 			assert.equal(inflectors.singularize('bankLineMatches'), 'bankLineMatch');
 		});
+		it('indices to index', function() {
+			assert.equal(inflectors.singularize('indices'), 'index');
+		});
 	});
 	describe('custom', function() {
 		before(function() {
