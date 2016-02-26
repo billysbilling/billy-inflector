@@ -71,7 +71,7 @@
 	};
 
 	// Clears singular rules and recreates from opposites of plural rules
-	_updateSingulars = function() {
+	var _updateSingulars = function() {
 		singulars = {};
 		for (var k in plurals) {
 			if (!plurals.hasOwnProperty(k)) continue;
